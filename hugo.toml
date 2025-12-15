@@ -1,53 +1,48 @@
-# =========================
-# Hugo basic configuration
-# =========================
-
 baseURL = "https://amoxicillinnn.github.io/"
 languageCode = "en-us"
-title = "My First Hugo Site"
+title = "My Industrial Data Blog"
 theme = "PaperMod"
-
 enableRobotsTXT = true
 
-# =========================
-# Pagination (NEW SYNTAX)
-# =========================
-
 [pagination]
-  pagerSize = 10
-
-# =========================
-# PaperMod parameters
-# =========================
+pagerSize = 10
 
 [params]
-  env = "production"
-  defaultTheme = "auto"
-
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowCodeCopyButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-
-# =========================
-# Home info (PaperMod)
-# =========================
+env = "production"
+defaultTheme = "dark"             # 固定暗色模式
+themePrimaryColor = "#ff6600"     # 高对比橙色主色
+ShowReadingTime = true
+ShowShareButtons = true
+ShowCodeCopyButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+enableThemeSwitch = true
+customCSS = ["css/custom.css"]    # 引入自定义 CSS
 
 [params.homeInfoParams]
-  Title = "Welcome"
-  Content = "This site is built with Hugo + PaperMod."
-
-# =========================
-# Menu
-# =========================
+Title = "Welcome to My Industrial Data Blog"
+Content = "This site is built with Hugo + PaperMod. Here I share tutorials and insights on building low-cost, scalable industrial data acquisition and visualization systems. Stay tuned for more posts!"
 
 [[menu.main]]
-  name = "Posts"
-  url = "/posts/"
-  weight = 1
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
 
 [[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 2
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+identifier = "archive"
+name = "Archive"
+url = "/archives/"
+weight = 3
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 4
